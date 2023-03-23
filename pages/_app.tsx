@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /*eslint linebreak-style: ["error", "windows"]*/
 import { ColorScheme, ColorSchemeProvider, MantineProvider } from '@mantine/core';
 import { NotificationsProvider } from '@mantine/notifications';
@@ -7,6 +8,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { Provider } from 'react-redux';
+import { Analytics } from '@vercel/analytics/react';
 import MainLayout from '../components/Layouts/MainLayout';
 import { store } from '../redux/store';
 
@@ -24,15 +26,16 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
   return (
     <>
       <Head>
-        <title>NoteRep Forum</title>
+        <title>NoteRep Forum - MSRIT</title>
         <meta
           name="description"
-          content="Noterep Community: Connecting College Students Thoughts"
+          content="A Community Forum: Connecting College Students Thoughts"
         />
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
-        <link rel="icon" href="/noterep-logo.png" />
-        <meta name="keywords" content="Noterep, Noterep Forum, Noterep Community" />
+        <link rel="icon" href="/icon-192x192.png" />
         <link rel="shortcut icon" href="/noterep-logo.png" />
+        <meta name="keywords" content="Noterep, Noterep Forum, Noterep Community" />
+        <meta name="author" content="Noterep Forum" />
       </Head>
 
       <Provider store={store}>
@@ -46,6 +49,7 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
           </MantineProvider>
         </ColorSchemeProvider>
       </Provider>
+      <Analytics />
     </>
   );
 }
