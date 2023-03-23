@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import {
   Box,
   Button,
@@ -18,6 +19,7 @@ import fredditLogoGrayscale from '../../public/freddit-grayscale.png';
 import noterepLogoAvatar from '../../public/noterep-avatar.png';
 
 import frogCityImage from '../../public/frog-city-watercolour3.png';
+import noterepCityImage from '../../public/noterep-city-watercolour2.png';
 import { CommunityProps } from '../../redux/slices/communitySlice';
 
 const TopCommunites: React.FC = () => {
@@ -58,10 +60,10 @@ const TopCommunites: React.FC = () => {
           <Flex direction="column">
             <Box sx={{ width: '100%', position: 'relative', height: '40px' }}>
               <Image
-                src={frogCityImage}
+                src={noterepCityImage}
                 alt="frog in cyberpunk city (watercolor)"
                 fill
-                style={{ objectFit: 'cover', objectPosition: '5px 80%' }}
+                style={{ objectFit: 'cover', objectPosition: '80%' }}
               />
             </Box>
             <Box sx={{ flex: 1, paddingLeft: '1rem', margin: '0.8rem 0', width: '100%' }}>

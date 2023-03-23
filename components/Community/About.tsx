@@ -16,7 +16,7 @@ import { useRouter } from 'next/router';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from '../../firebase/firebaseConfig';
-import frogBG from '../../public/frog-city-watercolour3.png';
+import frogBG from '../../public/noterep-city-watercolour3.png';
 import { useAppDispatch } from '../../redux/hooks/hooks';
 import { setAuthModalOpen, setAuthModalView } from '../../redux/slices/authModalSlice';
 import { CommunityProps } from '../../redux/slices/communitySlice';

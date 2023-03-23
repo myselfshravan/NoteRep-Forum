@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { ActionIcon, Flex } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import { IconTrendingUp, IconPlus, IconCoinPound } from '@tabler/icons-react';
@@ -10,19 +11,19 @@ const ActionIcons: React.FC<ActionIconsProps> = () => {
 
   return (
     <Flex gap="0.2rem">
-      {!isMobile && (
+      {/* {!isMobile && (
         <Flex>
-          {/* <ActionIcon title="Coin">
+          <ActionIcon title="Coin">
             <IconCoinPound />
           </ActionIcon>
           <ActionIcon title="Trending">
             <IconTrendingUp />
-          </ActionIcon> */}
+          </ActionIcon>
         </Flex>
-      )}
-      <ActionIcon title="Create Post">
+      )} */}
+      {/* <ActionIcon title="Create Post">
         <IconPlus size={28} />
-      </ActionIcon>
+      </ActionIcon> */}
     </Flex>
   );
 };

@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from '../../firebase/firebaseConfig';
-import fredditLogo from '../../public/noterep-logo.png';
+import noterepLogoAvatar from '../../public/noterep-logo.png';
 import AuthModal from '../AuthModal/AuthModal';
 import AccountMenu from './AccountMenu';
 import ActionIcons from './ActionIcons';
@@ -37,7 +37,15 @@ const Navbar: React.FC = () => {
     <Header height={56} className={classes.header}>
       <div className={classes.inner}>
         <Group>
-          <Image src={fredditLogo} alt="white & green frog logo" width={40} height={40} />
+          <Image
+            src={noterepLogoAvatar}
+            alt="Noterep Logo Avatar NavBar"
+            width={40}
+            height={40}
+            style={{
+              borderRadius: '20%',
+            }}
+          />
           <Title
             order={2}
             display={{ base: 'none', md: 'unset' }}

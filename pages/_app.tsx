@@ -29,8 +29,15 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
         <title>NoteRep Forum - MSRIT</title>
         <meta
           name="description"
-          content="A Community Forum: Connecting College Students Thoughts"
+          content="Connecting Collegiate Ideas through Our Community Forum."
+          // content="Connecting College Students Thoughts through Community Forum"
         />
+        <meta name="theme-color" content="#000000" />
+        <meta name="msapplication-TileColor" content="#000000" />
+        <meta name="msapplication-TileImage" content="/icon-192x192.png" />
+        <meta name="application-name" content="Noterep Forum" />
+        <meta name="apple-mobile-web-app-title" content="Noterep Forum" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
         <link rel="icon" href="/icon-192x192.png" />
         <link rel="shortcut icon" href="/noterep-logo.png" />

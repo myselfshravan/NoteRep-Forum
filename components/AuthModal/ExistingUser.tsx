@@ -22,11 +22,7 @@ const ExistingUser: React.FC<ExistingUserProps> = () => {
         <Text>
           By continuing you agree to our{' '}
           <Text variant="gradient" span>
-            User Agreement
-          </Text>{' '}
-          and{' '}
-          <Text variant="gradient" span>
-            Privacy Policy
+            Terms of Service
           </Text>
         </Text>
       </Box>
@@ -34,10 +30,10 @@ const ExistingUser: React.FC<ExistingUserProps> = () => {
       <Divider label="OR" labelPosition="center" />
       <ExistingForm />
       <Text mt="1rem">
-        New to Freddit?{' '}
+        New to NoteRep Forum?{' '}
         <Text
           variant="gradient"
-          span
+          // span
           sx={{ cursor: 'pointer' }}
           onClick={() => dispatch(setAuthModalView('new'))}
         >

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react';
 import { Box, Flex, Modal } from '@mantine/core';
 import Image from 'next/image';
@@ -6,6 +7,7 @@ import { setAuthModalOpen } from '../../redux/slices/authModalSlice';
 import ExistingUser from './ExistingUser';
 import NewUser from './NewUser';
 import frogCity from '../../public/frog-city-watercolour3.png';
+import noterepCity from '../../public/noterep-city-watercolour2.png';
 
 type AuthModalProps = {};
 
@@ -25,7 +27,7 @@ const AuthModal: React.FC<AuthModalProps> = () => {
         <Flex>
           <Box sx={{ flex: '2', position: 'relative' }}>
             <Image
-              src={frogCity}
+              src={noterepCity}
               fill
               alt="watercolour frog in city"
               style={{ objectFit: 'cover', objectPosition: 'bottom' }}

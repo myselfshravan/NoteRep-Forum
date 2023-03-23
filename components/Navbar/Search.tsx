@@ -9,7 +9,7 @@ const Search: React.FC<SearchProps> = () => {
     <Flex sx={{ flexGrow: 1 }}>
       <Input
         icon={<IconSearch />}
-        placeholder="Search Freddit"
+        placeholder="Search NoteRep Forum"
         w={{ base: 'min-content', xs: '100%' }}
         mx="1rem"
       />

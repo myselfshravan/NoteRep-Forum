@@ -39,6 +39,7 @@ interface SinglePostProps {
   handleVote: (post: Post, vote: number, communityId: string) => void;
   selectPost?: (post: Post) => void;
   isHomePage?: boolean;
+  sharePost?: (post: Post) => void;
 }
 
 const SinglePost: React.FC<SinglePostProps> = ({
@@ -49,6 +50,7 @@ const SinglePost: React.FC<SinglePostProps> = ({
   handleVote,
   selectPost,
   isHomePage,
+  sharePost,
 }) => {
   const { colorScheme } = useMantineColorScheme();
   const [postError, setPostError] = useSetState(null as any);
@@ -73,6 +75,7 @@ const SinglePost: React.FC<SinglePostProps> = ({
   return (
     <Card
       sx={{
+        borderRadius: '0.4rem',
         display: 'flex',
         justifyContent: 'space-evenly',
         alignItems: 'center',
@@ -185,12 +188,17 @@ const SinglePost: React.FC<SinglePostProps> = ({
             >
               {post.totalComments}
             </Button>
-            <Button leftIcon={<IconShare />} variant="subtle">
-              Share
-            </Button>
-            <Button leftIcon={<IconBookmark />} variant="subtle">
+            <a
+              data-action="share/whatsapp/share"
+              href={`whatsapp://send?text=https://noterep-forum.vercel.app/f/${post.communityId}/comments/${post.id}`}
+            >
+              <Button leftIcon={<IconShare />} variant="subtle">
+                Share
+              </Button>
+            </a>
+            {/* <Button leftIcon={<IconBookmark />} variant="subtle">
               Save
-            </Button>
+            </Button> */}
             {userIsOwner && (
               <Button
                 loading={loadingDelete}

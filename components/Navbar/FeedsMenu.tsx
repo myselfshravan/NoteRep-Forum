@@ -14,6 +14,28 @@ import { useAppDispatch } from '../../redux/hooks/hooks';
 import { setCommunityModalOpen } from '../../redux/slices/communityModalSlice';
 import NewCommunityModal from '../NewCommunityModal/NewCommunityModal';
 
+function InfoCircle(props: React.ComponentProps<'svg'>) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="icon icon-tabler icon-tabler-info-square-rounded"
+      width="15"
+      height="15"
+      viewBox="0 0 24 24"
+      strokeWidth="2"
+      stroke="currentColor"
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 9h.01" />
+      <path d="M11 12h1v4h1" />
+      <path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z" />
+    </svg>
+  );
+}
+
 type FeedsMenuProps = {};
 
 const FeedsMenu: React.FC<FeedsMenuProps> = () => {
@@ -83,6 +105,9 @@ const FeedsMenu: React.FC<FeedsMenuProps> = () => {
         </Menu.Item>
         <Menu.Item icon={<IconTrendingUp size={14} />} component={Link} href="/">
           Popular
+        </Menu.Item>
+        <Menu.Item icon={<InfoCircle />} component={Link} href="/about">
+          About Us
         </Menu.Item>
       </Menu.Dropdown>
       <NewCommunityModal />

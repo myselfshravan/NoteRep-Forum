@@ -14,7 +14,7 @@ import {
 import Image from 'next/image';
 import { IconBellFilled } from '@tabler/icons-react';
 import { CommunityProps } from '../../redux/slices/communitySlice';
-import defaultBackground from '../../public/frog-city-watercolour2.png';
+import defaultBackground from '../../public/noterep-city-watercolour2.png';
 import grayscaleLogo from '../../public/freddit-grayscale.png';
 import noterepLogoAvatar from '../../public/noterep-avatar.png';
 

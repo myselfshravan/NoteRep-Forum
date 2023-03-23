@@ -47,9 +47,9 @@ const CreatePost: React.FC = () => {
         height={40}
         width={40}
         style={{
-          borderRadius: '10px',
+          borderRadius: '20%',
         }}
-        alt="freddit logo (grayscale)"
+        alt="noterepLogoAvatar logo create post"
       />
       <Input
         placeholder="Create Post"

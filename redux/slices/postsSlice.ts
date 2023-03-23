@@ -104,6 +104,13 @@ export const postsSlice = createSlice({
         state.selectedPost.totalComments -= 1;
       }
     },
+    generatePostLink: (state, action: PayloadAction<{ id: string; link: string }>) => {
+      state.posts.forEach((elem) => {
+        if (elem.id === action.payload.id) {
+          elem.link = action.payload.link;
+        }
+      });
+    },
   },
 });
 
@@ -120,6 +127,7 @@ export const {
   updateSelectedPostVoteValue,
   incrementSelectedPostComments,
   decrementSelectedPostComments,
+  generatePostLink,
 } = postsSlice.actions;
 
 export default postsSlice.reducer;
