@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react';
 import {
   ActionIcon,
@@ -15,6 +16,8 @@ import { IconBellFilled } from '@tabler/icons-react';
 import { CommunityProps } from '../../redux/slices/communitySlice';
 import defaultBackground from '../../public/frog-city-watercolour2.png';
 import grayscaleLogo from '../../public/freddit-grayscale.png';
+import noterepLogoAvatar from '../../public/noterep-avatar.png';
+
 import { useAppSelector } from '../../redux/hooks/hooks';
 import useCommunityInfo from '../../hooks/useCommunityInfo';
 
@@ -52,8 +55,8 @@ const CommunityHeader: React.FC<CommunityHeaderProps> = ({ communityInfo }) => {
           }}
         >
           <Image
-            src={currentCommunity?.imageURL ? currentCommunity.imageURL : grayscaleLogo}
-            alt="Freddit frog logo, grayscale"
+            src={currentCommunity?.imageURL ? currentCommunity.imageURL : noterepLogoAvatar}
+            alt="noterep Logo Avatar"
             height={70}
             width={70}
             style={{

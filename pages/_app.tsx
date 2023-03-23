@@ -25,8 +25,14 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
     <>
       <Head>
         <title>NoteRep Forum</title>
+        <meta
+          name="description"
+          content="Noterep Community: Connecting College Students Thoughts"
+        />
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
-        <link rel="shortcut icon" href="/freddit-logo.png" />
+        <link rel="icon" href="/noterep-logo.png" />
+        <meta name="keywords" content="Noterep, Noterep Forum, Noterep Community" />
+        <link rel="shortcut icon" href="/noterep-logo.png" />
       </Head>
 
       <Provider store={store}>

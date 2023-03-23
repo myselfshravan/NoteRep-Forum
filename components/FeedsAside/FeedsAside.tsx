@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Box, Group, Text, createStyles } from '@mantine/core';
 import { IconListSearch, IconPlus } from '@tabler/icons-react';
 import Image from 'next/image';
@@ -5,6 +6,8 @@ import Link from 'next/link';
 import React from 'react';
 import useCommunityInfo from '../../hooks/useCommunityInfo';
 import fredditLogoGray from '../../public/freddit-grayscale.png';
+import noterepLogoAvatar from '../../public/noterep-avatar.png';
+
 import { useAppDispatch } from '../../redux/hooks/hooks';
 import { setCommunityModalOpen } from '../../redux/slices/communityModalSlice';
 
@@ -55,11 +58,14 @@ const FeedsAside: React.FC = () => {
       sx={(theme) => ({ paddingLeft: 1 * theme.spacing.md })}
     >
       <Image
-        src={item.imageURL ? item.imageURL : fredditLogoGray}
+        src={item.imageURL ? item.imageURL : noterepLogoAvatar}
         alt="community badge"
         height={20}
         width={20}
-        style={{ marginRight: '0.4rem' }}
+        style={{
+          borderRadius: '20%',
+          marginRight: '0.4rem',
+        }}
       />
       {`f/${item.communityId}`}
       {item.isAdmin && (

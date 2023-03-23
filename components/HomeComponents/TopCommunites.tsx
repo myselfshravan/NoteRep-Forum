@@ -15,6 +15,8 @@ import React, { useEffect, useState } from 'react';
 import { db } from '../../firebase/firebaseConfig';
 import useCommunityInfo from '../../hooks/useCommunityInfo';
 import fredditLogoGrayscale from '../../public/freddit-grayscale.png';
+import noterepLogoAvatar from '../../public/noterep-avatar.png';
+
 import frogCityImage from '../../public/frog-city-watercolour3.png';
 import { CommunityProps } from '../../redux/slices/communitySlice';
 
@@ -89,10 +91,13 @@ const TopCommunites: React.FC = () => {
                         >
                           <Text>{index + 1}</Text>
                           <Image
-                            src={community.imageURL ? community.imageURL : fredditLogoGrayscale}
+                            src={community.imageURL ? community.imageURL : noterepLogoAvatar}
                             alt="community logo"
                             height={18}
                             width={18}
+                            style={{
+                              borderRadius: '25%',
+                            }}
                           />
                           <Link
                             key={community.id}

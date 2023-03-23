@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { ActionIcon, Button, Menu, Text, useMantineColorScheme } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import { IconHome2, IconLayoutDashboard, IconPlus, IconTrendingUp } from '@tabler/icons-react';
@@ -8,6 +9,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from '../../firebase/firebaseConfig';
 import useCommunityInfo from '../../hooks/useCommunityInfo';
 import fredditLogoGray from '../../public/freddit-grayscale.png';
+import noterepLogoAvatar from '../../public/noterep-avatar.png';
 import { useAppDispatch } from '../../redux/hooks/hooks';
 import { setCommunityModalOpen } from '../../redux/slices/communityModalSlice';
 import NewCommunityModal from '../NewCommunityModal/NewCommunityModal';
@@ -53,7 +55,10 @@ const FeedsMenu: React.FC<FeedsMenuProps> = () => {
                 href={`/f/${community.communityId}`}
                 icon={
                   <Image
-                    src={community.imageURL ? community.imageURL : fredditLogoGray}
+                    src={community.imageURL ? community.imageURL : noterepLogoAvatar}
+                    style={{
+                      borderRadius: '20%',
+                    }}
                     alt="community badge"
                     height={15}
                     width={15}

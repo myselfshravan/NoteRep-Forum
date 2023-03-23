@@ -1,15 +1,17 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { ActionIcon, Box, Button, Card, Group, Stack, Text } from '@mantine/core';
 import { User } from 'firebase/auth';
 import { doc, increment, writeBatch } from 'firebase/firestore';
 import moment from 'moment';
 import Image from 'next/image';
 import React, { Dispatch, SetStateAction, useState } from 'react';
+import { IconArrowBigDown, IconArrowBigUp } from '@tabler/icons-react';
 import { db } from '../../firebase/firebaseConfig';
 import fredditLogoGray from '../../public/freddit-grayscale.png';
+import noterepLogoAvatar from '../../public/noterep-avatar.png';
 import { useAppDispatch } from '../../redux/hooks/hooks';
 import { Post, decrementSelectedPostComments } from '../../redux/slices/postsSlice';
 import { Comment } from './CommentForm';
-import { IconArrowBigDown, IconArrowBigUp } from '@tabler/icons-react';
 
 interface SingleCommentProps {
   user?: User;
@@ -51,7 +53,10 @@ const SingleComment: React.FC<SingleCommentProps> = ({
       <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
         <Box>
           <Image
-            src={user?.photoURL ? user.photoURL : fredditLogoGray}
+            src={user?.photoURL ? user.photoURL : noterepLogoAvatar}
+            style={{
+              borderRadius: '10px',
+            }}
             alt="user badge"
             height={40}
             width={40}

@@ -11,16 +11,16 @@ const Rules: React.FC<RulesProps> = ({ communityInfo }) => {
   const dark = colorScheme === 'dark';
   const rules = [
     {
-      title: '1.Tech Stack',
-      body: 'This app was made with Typescript, React, NextJS, Mantine & Redux Toolkit',
+      title: '1.Stay on-topic',
+      body: 'Keep discussions relevant to college life. This includes topics such as: study tips, exam advice, course recommendations, and more.',
     },
     {
-      title: '2.Features',
-      body: 'There is full user authorisation via Firebase (with the help of Firebase Hooks) as well as most of Reddits core functionality. You can create communities as well as create & delete posts & comments, & vote on posts',
+      title: "2.Respect others' views",
+      body: 'Be respectful of others. This includes not posting content that is offensive, hateful, or discriminatory.',
     },
     {
-      title: '3.Improvements',
-      body: "There are a few features I've created a skeleton for but not yet completed. I'd like to add full filter functionality for posts and make better use of Next's server rendering features",
+      title: '3.Learn and enjoy',
+      body: "Don't be afraid to ask questions. This is a community for learning and sharing knowledge.",
     },
   ];
   return (

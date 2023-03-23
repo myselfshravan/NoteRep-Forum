@@ -20,5 +20,6 @@ module.exports = {
     'arrow-body-style': 'off',
     'no-console': 'off',
     'linebreak-style': 0,
+    'no-unused-vars': 'off',
   },
 };

@@ -27,6 +27,8 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
 import fredditLogoGray from '../../public/freddit-grayscale.png';
+import noterepLogoAvatar from '../../public/noterep-avatar.png';
+
 import { Post } from '../../redux/slices/postsSlice';
 
 interface SinglePostProps {
@@ -123,7 +125,10 @@ const SinglePost: React.FC<SinglePostProps> = ({
             {isHomePage && (
               <>
                 <Image
-                  src={post.communityImageURL ? post.communityImageURL : fredditLogoGray}
+                  src={post.communityImageURL ? post.communityImageURL : noterepLogoAvatar}
+                  style={{
+                    borderRadius: '20%',
+                  }}
                   alt="community logo"
                   height={20}
                   width={20}

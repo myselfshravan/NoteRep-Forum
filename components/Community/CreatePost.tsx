@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { ActionIcon, Input, Paper, Tooltip, useMantineColorScheme } from '@mantine/core';
 import { IconLink, IconPhoto } from '@tabler/icons-react';
 import Image from 'next/image';
@@ -5,6 +6,7 @@ import React from 'react';
 import { useRouter } from 'next/router';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import grayscaleLogo from '../../public/freddit-grayscale.png';
+import noterepLogoAvatar from '../../public/noterep-avatar.png';
 import { auth } from '../../firebase/firebaseConfig';
 import { useAppDispatch } from '../../redux/hooks/hooks';
 import { setAuthModalOpen, setAuthModalView } from '../../redux/slices/authModalSlice';
@@ -40,7 +42,15 @@ const CreatePost: React.FC = () => {
       p="sm"
       withBorder
     >
-      <Image src={grayscaleLogo} height={40} width={40} alt="freddit logo (grayscale)" />
+      <Image
+        src={noterepLogoAvatar}
+        height={40}
+        width={40}
+        style={{
+          borderRadius: '10px',
+        }}
+        alt="freddit logo (grayscale)"
+      />
       <Input
         placeholder="Create Post"
         sx={{ flex: 1, cursor: 'pointer' }}
