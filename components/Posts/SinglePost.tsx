@@ -55,6 +55,7 @@ const SinglePost: React.FC<SinglePostProps> = ({
   const { colorScheme } = useMantineColorScheme();
   const [postError, setPostError] = useSetState(null as any);
   const [loadingDelete, setLoadingDelete] = useSetState(false as any);
+  const [loadingEdit, setLoadingEdit] = useSetState(false as any);
   const dark = colorScheme === 'dark';
   const singlePost = !selectPost;
   const router = useRouter();

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Box, useMantineColorScheme } from '@mantine/core';
 import { User } from 'firebase/auth';
 import { useRouter } from 'next/router';

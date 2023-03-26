@@ -108,31 +108,35 @@ export default function AboutPage() {
       <Container
         size="xl"
         sx={{
-          display: 'flex',
-          gap: '1rem',
-          flexDirection: `${isSmall ? 'column' : 'row'}`,
           marginTop: '0.8rem',
         }}
       >
-        <Box sx={{ flex: '1', display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+        <Box sx={{ padding: `${isSmall ? '0rem' : '2rem'}` }}>
           <h1>About Us</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc eget aliquam
-            tincidunt, nunc nisl aliquam mauris, eget aliquam nunc nisl eget nunc. Donec euismod,
-            nunc eget aliquam tincidunt, nunc nisl aliquam mauris, eget aliquam nunc nisl eget nunc.
-            Donec euismod, nunc eget aliquam tincidunt, nunc nisl aliquam mauris, eget aliquam nunc
-            nisl eget nunc. Donec euismod, nunc eget aliquam tincidunt, nunc nisl aliquam mauris,
-            eget aliquam nunc nisl eget nunc. Donec euismod, nunc eget aliquam tincidunt, nunc nisl
-            aliquam mauris, eget aliquam nunc nisl eget nunc. Donec euismod, nunc eget aliquam
-            tincidunt, nunc nisl aliquam mauris, eget aliquam nunc nisl eget nunc. Donec euismod,
-            nunc eget aliquam tincidunt, nunc nisl aliquam mauris, eget aliquam nunc nisl eget nunc.
-            Donec euismod, nunc eget aliquam tincidunt, nunc nisl aliquam mauris, eget aliquam nunc
-            nisl eget nunc. Donec euismod, nunc eget aliquam tincidunt, nunc nisl aliquam mauris,
-            eget aliquam nunc nisl eget nunc. Donec euismod, nunc eget aliquam tincidunt, nunc nisl
-            aliquam mauris, eget aliquam nunc nisl eget nunc. Donec euismod, nunc eget aliquam
-            tincidunt, nunc nisl aliquam mauris, eget aliquam nunc nisl eget nunc. Donec euismod,
-            nunc eget aliquam tincidunt, nunc nisl aliquam
+            Welcome to <b>Noterep Forum</b>, the ultimate forum for college students who are
+            passionate about technology, sharing resources, and discussing the latest news and
+            trends.
           </p>
+          <p>
+            Our platform was born out of a need to provide students with a inclusive space to share
+            their knowledge and ideas. I noticed that although many college students are
+            enthusiastic about learning and exploring new things, they often lack a platform to
+            express their thoughts and ideas beyond the classroom. Also often steps back from
+            sharing on class WhatsApp groups. That&lsquo;s why I created Noterep - a community where
+            students can freely share their thoughts and knowledge, and engage in discussions about
+            the latest technological advancements and news.
+          </p>
+          <p>
+            Noterep is more than just a notes-sharing platform; it&lsquo;s a space for
+            collaboration, connection, and growth. Whether you&lsquo;re looking for study materials,
+            exploring new fields of technology, or just want to connect with like-minded
+            individuals, Noterep has got you covered. Our community is open, and I welcome all
+            students. I believe that learning is a lifelong journey, and we&lsquo;re here to support
+            and help each others. Create community today and start sharing your ideas, asking
+            questions, and building your knowledge with Noterep Forum.
+          </p>
+          <i>This Platform is Re Structured and Developed by</i> <b>Shravan</b>
         </Box>
         <Box
           sx={{

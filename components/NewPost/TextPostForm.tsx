@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Box, Button, Divider, Group, TextInput, Textarea } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { User } from 'firebase/auth';
@@ -74,7 +75,6 @@ const TextPostForm: React.FC<TextPostFormProps> = ({
           {...form.getInputProps('body')}
         />
         <Divider my="sm" />
-
         <Group position="right" mt="md">
           <Button loading={loading} type="submit">
             Post

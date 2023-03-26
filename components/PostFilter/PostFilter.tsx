@@ -10,7 +10,7 @@ const PostFilter: React.FC = () => {
     <Paper
       sx={{
         display: 'flex',
-        justifyContent: 'flex-start',
+        justifyContent: 'space-around',
         alignItems: 'center',
         gap: '0.6rem',
       }}
@@ -21,9 +21,9 @@ const PostFilter: React.FC = () => {
       <Button variant="light" leftIcon={<IconRocket size={30} />}>
         Best
       </Button>
-      <Button variant="subtle" leftIcon={<IconRosette size={30} />}>
+      {/* <Button variant="subtle" leftIcon={<IconRosette size={30} />}>
         New
-      </Button>
+      </Button> */}
       <Button variant="subtle" leftIcon={<IconArrowUpCircle size={30} />}>
         Top
       </Button>

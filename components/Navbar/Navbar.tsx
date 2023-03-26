@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /*eslint linebreak-style: ["error", "windows"]*/
 import { Group, Header, Title, createStyles } from '@mantine/core';
 import Image from 'next/image';
@@ -56,7 +57,7 @@ const Navbar: React.FC = () => {
           </Title>
           <FeedsMenu />
         </Group>
-        <Search />
+        {/* <Search /> */}
         <Group sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           {user ? <ActionIcons /> : <AuthButtons />}
           <AccountMenu />
